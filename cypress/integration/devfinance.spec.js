@@ -15,4 +15,18 @@ describe('DevFinance',()=>{
 
     cy.get('#data-table tbody tr').should('have.length',1)
   })
+
+  it('Adicionar uma nova transação de saida',()=>{
+    cy.visit('https://dev-finance.netlify.app/')
+
+    cy.get('a[onclick*=open]').click()
+    cy.get('#description').type('Café')
+    cy.get('#amount').type('-12')
+    cy.get('#date').type('2021-11-03')
+
+    // botão com o texto "Salvar"
+    cy.contains('button','Salvar').click()
+
+    cy.get('#data-table tbody tr').should('have.length',1)
+  })
 })
