@@ -1,6 +1,3 @@
-### Demonstração
-![alt text](./cypress/videos/devfinance.gif)
-
 ### Referencias
 - https://github.com/samlucax/cypress-learning-checklist
 - https://www.youtube.com/c/Agilizei
